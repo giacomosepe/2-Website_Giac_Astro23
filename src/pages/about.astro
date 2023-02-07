@@ -3,41 +3,27 @@ import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import { Picture } from "@astrojs/image/components";
+import profilePicture from "assets/giacomo-sepe.png";
+import { Icon } from "astro-icon";
 
-const TeamImg1 =
-  "https://images.unsplash.com/photo-1580489944761-15a19d654956?&fit=crop&w=280";
-const TeamImg2 =
-  "https://images.unsplash.com/photo-1633332755192-727a05c4013d?&fit=crop&w=280";
-const TeamImg3 =
-  "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?&fit=crop&w=280";
-
-const team = [
-  // {
-  //   name: "Janette Lynch",
-  //   title: "Senior Director",
-  //   avatar: {
-  //     src: TeamImg1,
-  //     width: 480,
-  //     height: 560,
-  //   },
-  // },
+const experiences = [
   {
-    name: "Marcell Ziemann",
-    title: "Principal Strategist",
-    avatar: {
-      src: TeamImg2,
-      width: 580,
-      height: 580,
-    },
+    name: "test 1",
+    icon: "mdi:check",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, praesentium sunt hic modi veritatis molestiae nulla accusamus a perspiciatis consequatur!L",
   },
   {
-    name: "Robert Palmer",
-    title: "Marketing Engineer",
-    avatar: {
-      src: TeamImg3,
-      width: 580,
-      height: 580,
-    },
+    name: "test 2",
+    icon: "mdi:check",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, praesentium sunt hic modi veritatis molestiae nulla accusamus a perspiciatis consequatur!L",
+  },
+  {
+    name: "test 3",
+    icon: "mdi:check",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, praesentium sunt hic modi veritatis molestiae nulla accusamus a perspiciatis consequatur!L",
   },
 ];
 ---
@@ -59,30 +45,55 @@ const team = [
         the job. This is what makes our team so special.
       </p>
     </div>
-    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
-      {
-        team.map((item) => (
-          <div class="group">
-            <div class="w-full aspect-square">
-              <Picture
-                {...item.avatar}
-                format="avif"
-                alt="Team"
-                widths={[200, 400]}
-                aspectRatio="1:1"
-                sizes="(max-width: 800px) 100vw, 400px"
-                class="w-full h-full object-cover rounded transition  group-hover:-translate-y-1 group-hover:shadow-xl"
-                format="avif"
-              />
-            </div>
+    <div class="grid md:grid-cols-[2fr,1fr] gap-10 mx-auto max-w-4xl mt-12">
+      <div class="w-full aspect-square">
+        <ul>
+          {
+            experiences.map((exp) => (
+              <li>
+                <div class="flex mt-5 align-middle">
+                  <Icon
+                    class="pb-2 mr-3 text-gray-500"
+                    name={exp.icon}
+                    width="15"
+                  />
+                  <h3 class="font-semibold text-xl text-gray-500 mb-1">
+                    <span />
+                    {exp.name}
+                  </h3>
+                </div>
 
-            <div class="mt-4 text-center">
-              <h2 class="text-lg text-gray-800"> {item.name}</h2>
-              <h3 class="text-sm text-slate-500"> {item.title}</h3>
-            </div>
-          </div>
-        ))
-      }
+                <p class="text-slate-500">{exp.description}</p>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <div class="mt-4 text-center">
+        <Picture
+          src={profilePicture}
+          alt="Giac the astronaut"
+          widths={[500, 700]}
+          aspectRatio="3:4"
+          sizes="(max-width: 800px) 100vw, 620px"
+          loading="eager"
+          format="avif, png"
+        />
+      </div>
+
+      <div class="grid md:grid-cols-1 gap-10 mx-auto max-w-4xl mt-6">
+        <div class="mt-4 text-center">
+          <h2 class="text-lg text-gray-800">name</h2>
+          <h3 class="text-sm text-slate-500">title</h3>
+        </div>
+        <div class="w-full aspect-square">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt,
+            praesentium sunt hic modi veritatis molestiae nulla accusamus a
+            perspiciatis consequatur!
+          </p>
+        </div>
+      </div>
     </div>
   </Container>
 </Layout>
