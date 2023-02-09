@@ -8,22 +8,22 @@ import { Icon } from "astro-icon";
 
 const experiences = [
   {
-    name: "test 1",
+    name: "Current engagement",
     icon: "mdi:check",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, praesentium sunt hic modi veritatis molestiae nulla accusamus a perspiciatis consequatur!L",
+      "I am working with Smartbox  🏅 to find opportunities for a corporate venture project. Am also working on short term consulting mandates for companies to secure public financing with VVA.",
   },
   {
-    name: "test 2",
+    name: "Main activities",
     icon: "mdi:check",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, praesentium sunt hic modi veritatis molestiae nulla accusamus a perspiciatis consequatur!L",
+      "I scout and select investment opportunities in the publishing, media, software and renewable energy industries",
   },
   {
     name: "test 3",
     icon: "mdi:check",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, praesentium sunt hic modi veritatis molestiae nulla accusamus a perspiciatis consequatur!L",
+      "An obsessive and serial learner, I study photography and coding, especially React - Next-JS, and anything useful to become a better investor and a solid tech savvy Product Manager. ",
   },
 ];
 ---
@@ -32,17 +32,19 @@ const experiences = [
   <Container>
     <Sectionhead>
       <Fragment slot="title">About</Fragment>
-      <Fragment slot="desc">Il mio resume.</Fragment>
+      <Fragment slot="desc">Some more info</Fragment>
     </Sectionhead>
 
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
       <h2 class="font-bold text-3xl text-gray-800">
-        Empowering the world with Astro.
+        Building and financing tech products
       </h2>
       <p class="text-lg leading-relaxed text-slate-500">
-        We're a multi-cultural team from around the world! We come from diverse
-        backgrounds, bringing different personalities, experiences and skills to
-        the job. This is what makes our team so special.
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis,
+        dolores! Optio quo nemo distinctio, in dolorem dicta veniam non repellat
+        alias cumque incidunt autem quod quos minus veritatis fugiat facilis?
+        Consequuntur, quos autem in sequi temporibus tenetur, quidem ut aut sit
+        nobis ex? Doloribus hic labore est praesentium quisquam dignissimos..
       </p>
     </div>
     <div class="grid md:grid-cols-[2fr,1fr] gap-10 mx-auto max-w-4xl mt-12">
@@ -51,48 +53,47 @@ const experiences = [
           {
             experiences.map((exp) => (
               <li>
-                <div class="flex mt-5 align-middle">
+                <div class="flex mt-5">
                   <Icon
                     class="pb-2 mr-3 text-gray-500"
                     name={exp.icon}
-                    width="15"
+                    width="20"
                   />
+
                   <h3 class="font-semibold text-xl text-gray-500 mb-1">
                     <span />
                     {exp.name}
                   </h3>
                 </div>
-
-                <p class="text-slate-500">{exp.description}</p>
+                <p class="text-slate-500 ml-9">{exp.description}</p>
               </li>
             ))
           }
         </ul>
       </div>
-      <div class="mt-4 text-center">
+      <div class="mt-4 pb-0 text-center">
         <Picture
           src={profilePicture}
           alt="Giac the astronaut"
-          widths={[500, 700]}
+          widths={[200, 400]}
           aspectRatio="3:4"
-          sizes="(max-width: 800px) 100vw, 620px"
+          sizes="(max-width: 500px) 100vw, 620px"
           loading="eager"
-          format="avif, png"
+          format="png"
         />
       </div>
-
-      <div class="grid md:grid-cols-1 gap-10 mx-auto max-w-4xl mt-6">
-        <div class="mt-4 text-center">
-          <h2 class="text-lg text-gray-800">name</h2>
-          <h3 class="text-sm text-slate-500">title</h3>
-        </div>
-        <div class="w-full aspect-square">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt,
-            praesentium sunt hic modi veritatis molestiae nulla accusamus a
-            perspiciatis consequatur!
-          </p>
-        </div>
+    </div>
+    <div class="grid md:grid-cols-1 gap-10 mx-auto max-w-4xl mt-1">
+      <div class="mt-4 text-center">
+        <h2 class="text-2xl text-gray-800">name</h2>
+        <h3 class="text-sm text-slate-500">title</h3>
+      </div>
+      <div class="w-full aspect-square">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt,
+          praesentium sunt hic modi veritatis molestiae nulla accusamus a
+          perspiciatis consequatur!
+        </p>
       </div>
     </div>
   </Container>

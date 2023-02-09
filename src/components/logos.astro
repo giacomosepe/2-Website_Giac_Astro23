@@ -2,17 +2,60 @@
 // @ts-ignore
 import { Image } from "@astrojs/image/components";
 import { Icon } from "astro-icon";
-import LogoImage from "assets/logos/fineurop-logo.png";
-import LogoImage2 from "assets/logos/merrill_lynch-logo.png";
-import LogoImage3 from "assets/logos/UBS-logo.png";
+import styles from "./ui/link.astro";
 import Link from "./ui/link.astro";
+
+const logos = [
+  {
+    name: "Fineurop",
+    src: "fineurop-logo",
+    width: "100",
+    height: "50",
+    url: "https://fineurop.it",
+  },
+  {
+    name: "Hines",
+    src: "hines-logo",
+    width: "140",
+    height: "40",
+    url: "https://hines.com",
+  },
+  {
+    name: "Merrill Lynch",
+    src: "merrill_lynch-logo",
+    width: "90",
+    height: "60",
+    url: "https://blackrock.com",
+  },
+  {
+    name: "UBS",
+    src: "UBS-logo",
+    width: "120",
+    height: "35",
+    url: "https://ubs.com",
+  },
+];
 ---
 
 <div class="mt-24">
   <h2 class="text-center text-slate-500">Comapnies I worked for</h2>
   <div class="flex gap-8 md:gap-20 items-center justify-center mt-10 flex-wrap">
-    <a href="https://fineurop.it" target="_blank">
+    {
+      logos.map((logo, index) => (
+        <Link style="transparent" href={logo.url} target="_blank">
+          <Image
+            alt={logo.name}
+            src={`src/assets/logos/${logo.src}.png`}
+            width={logo.width}
+            height={logo.height}
+          />
+        </Link>
+      ))
+    }
+
+    <!-- <a href="https://fineurop.it" target="_blank">
       <Image
+      class="bg-white hover:bg-gray-50"
         class="h-8 md:h-12"
         src={LogoImage}
         width="100"
@@ -20,22 +63,7 @@ import Link from "./ui/link.astro";
         alt={LogoImage}
       /></a
     >
-    <Image
-      href="https://blackrock.com"
-      class="h-8 md:h-12"
-      src={LogoImage2}
-      width="90"
-      height="60"
-      alt={LogoImage2}
-    />
-    <Image
-      href="https://hines.com"
-      class="h-8 md:h-12"
-      src={LogoImage3}
-      width="120"
-      height="35"
-      alt={LogoImage3}
-    />
+    /> -->
 
     <!-- <Icon class="h-8 md:h-12" name="simple-icons:svelte" />
     <Icon class="h-8 md:h-14" name="simple-icons:tailwindcss" />
