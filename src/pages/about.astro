@@ -8,22 +8,22 @@ import { Icon } from "astro-icon";
 
 const experiences = [
   {
+    name: "A short bio",
+    icon: "mdi:check",
+    description:
+      "I am an entrepreneur and a consultant. I look for entrepreneurs with projects and ideas to raise capital for.",
+  },
+  {
+    name: "The Goal of my job",
+    icon: "mdi:check",
+    description:
+      "Offer complete financial and strategic solutions to support companies on business development through acquiring businesses or turning ideas into products and services.",
+  },
+  {
     name: "Current engagement",
     icon: "mdi:check",
     description:
-      "I am working with Smartbox  🏅 to find opportunities for a corporate venture project. Am also working on short term consulting mandates for companies to secure public financing with VVA.",
-  },
-  {
-    name: "Main activities",
-    icon: "mdi:check",
-    description:
-      "I scout and select investment opportunities in the publishing, media, software and renewable energy industries",
-  },
-  {
-    name: "test 3",
-    icon: "mdi:check",
-    description:
-      "An obsessive and serial learner, I study photography and coding, especially React - Next-JS, and anything useful to become a better investor and a solid tech savvy Product Manager. ",
+      "I am working with Smartbox 🏅 to find investment opportunities for a corporate venture project. Am also working on short term consulting mandates for companies to secure public financing with VVA.",
   },
 ];
 ---
@@ -32,7 +32,7 @@ const experiences = [
   <Container>
     <Sectionhead>
       <Fragment slot="title">About</Fragment>
-      <Fragment slot="desc">Some more info</Fragment>
+      <Fragment slot="desc"></Fragment>
     </Sectionhead>
 
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
@@ -40,11 +40,15 @@ const experiences = [
         Building and financing tech products
       </h2>
       <p class="text-lg leading-relaxed text-slate-500">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis,
-        dolores! Optio quo nemo distinctio, in dolorem dicta veniam non repellat
-        alias cumque incidunt autem quod quos minus veritatis fugiat facilis?
-        Consequuntur, quos autem in sequi temporibus tenetur, quidem ut aut sit
-        nobis ex? Doloribus hic labore est praesentium quisquam dignissimos..
+        All companies have unrealized ideas. I help turn unrealized ideas into
+        viable and sustainable businesses. I support business development
+        through acquisitions advisory, greenfield product launches, capital
+        raising.
+      </p>
+      <p class="text-lg leading-relaxed text-slate-500">
+        I look for industry specific trends, analyze competitors and customers,
+        I study investment opportunities, and create business plans. I also meet
+        with entrepreneurs and investors a lot.
       </p>
     </div>
     <div class="grid md:grid-cols-[2fr,1fr] gap-10 mx-auto max-w-4xl mt-12">
@@ -85,16 +89,31 @@ const experiences = [
     </div>
     <div class="grid md:grid-cols-1 gap-10 mx-auto max-w-4xl mt-1">
       <div class="mt-4 text-center">
-        <h2 class="text-2xl text-gray-800">name</h2>
-        <h3 class="text-sm text-slate-500">title</h3>
+        <h2 class="text-2xl text-gray-500 font-bold">Bio</h2>
+        <h3 class="text-sm text-slate-400 font-semibold">Short story, long</h3>
       </div>
-      <div class="w-full aspect-square">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt,
-          praesentium sunt hic modi veritatis molestiae nulla accusamus a
-          perspiciatis consequatur!
-        </p>
-      </div>
+      <!-- <br class="w-full aspect-square" /> -->
+
+      <p class="text-lg leading-relaxed text-slate-500">
+        <span class="font-semibold">Activities I do most of the time:</span>
+        🔎  I research specific industries, to understand niches, audiences and competitors.
+        Particularly interested in Software, energy, publishing, yachting, food.
+        📈 I write and read business plans, business models, financial projections
+        📝 I write Product Requirement Docs, capital raising presentations, research
+        documents 🏦  I help secure grants and fiscal incentives for R&D investments
+        🧑‍💻  I support investors on their investments and divestments.
+      </p>
+
+      <p class="text-lg leading-relaxed text-slate-500">
+        👬  I have a partnership with Claudio Calvani and Matteo Bellina at
+        <a class="text-lime-700/75" href="https://vva.it"
+          >Valdani e Vicari Debt & Grants</a
+        >
+        to advise companies on debt raising. 👬   And an agreement with <a
+          class="text-purple-700/50"
+          href="https://neon2020.com">Neon</a
+        > communication agency specialized in building audience communication channels.
+      </p>
     </div>
   </Container>
 </Layout>

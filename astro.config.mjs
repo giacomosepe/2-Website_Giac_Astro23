@@ -6,6 +6,7 @@ import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
   site: "https://2-website-giac-astro23.vercel.app/",
+  base: "/",
   integrations: [
     tailwind(),
     image({
