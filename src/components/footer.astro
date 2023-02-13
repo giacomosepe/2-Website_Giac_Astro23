@@ -1,6 +1,8 @@
 <footer class="my-20">
   <p class="text-center text-sm text-slate-500">
-    Built personally with © {new Date().getFullYear()} Astro 2.0.
+    Built with Astro 2.0 © | <span id="copyright">
+      {new Date().getFullYear()}
+    </span>
   </p>
   <!--
     Can we ask you a favor 🙏
@@ -11,3 +13,9 @@
     Made on the <span>Astroship starter</span>
   </p>
 </footer>
+
+<script>
+  document.querySelector("#copyright").textContent = new Date()
+    .getFullYear()
+    .toString();
+</script>
