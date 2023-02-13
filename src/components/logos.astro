@@ -1,6 +1,6 @@
 ---
 // @ts-ignore
-import { Image } from "@astrojs/image/components";
+
 import { Picture } from "@astrojs/image/components";
 import { Icon } from "astro-icon";
 import styles from "./ui/link.astro";
@@ -14,7 +14,7 @@ import Logos from "./data/logos.js";
     {
       Logos.map((logo, index) => (
         <Link style="transparent" href={logo.url} target="_blank">
-          <Image
+          <img
             alt={logo.name}
             src={logo.src}
             width={logo.width}
