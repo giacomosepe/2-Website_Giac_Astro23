@@ -8,21 +8,22 @@ import { Icon } from "astro-icon";
 
 const experiences = [
   {
-    name: "A short bio",
-    icon: "mdi:check",
-    description: "I am an entrepreneur and a consultant. .",
-  },
-  {
-    name: "The Goal of my job",
+    name: "A (short) bio",
     icon: "mdi:check",
     description:
-      "Offer complete financial and strategic solutions to support companies on business development through acquiring businesses or turning ideas into products and services.",
+      "In my early career I worked as customer service manager and sales for private equity funds. After the MBA at Columbia, I moved to private equity investment management. And after that I pursued a more entrepreneurial career. This all story led to where I am now, at the crossroads of project management, capital raising and investment analysis. I see myself as a jack of all trades as I have developed different skills and been exposed to different industries with an entrepreneurial mindset. I have therefore developed a close and reliable network of specialists to get help when there is need of specific knowledge.",
   },
   {
-    name: "Current engagement",
+    name: "I am on a mission",
     icon: "mdi:check",
     description:
-      "I am working with Smartbox 🏅 to find investment opportunities for a corporate venture project. Am also working on short term consulting mandates for companies to secure public financing with VVA.",
+      "I am interested in building great products that make a difference for investors and for the audience they cater to. My job is to build a business case, find financial resources, deploy them wisely and monitor results. I have this several times and for me it is the most rewarding job as when successful I feel useful to both investors and customers.",
+  },
+  {
+    name: "Activities I do",
+    icon: "mdi:check",
+    description:
+      "I research industries trying to understand customers, niches, markets and competitors. I write documents, articles, reports. 📝 I write Product Requirement Docs, capital raising presentations, research documents. 📈 I also write and read business plans, business models, financial projections. 🏦  Finally, I approach and involve investors and I scout for other financial resources to support projects with adequate capital.",
   },
 ];
 ---
@@ -35,22 +36,16 @@ const experiences = [
     </Sectionhead>
 
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
-      <h2 class="font-bold text-3xl text-gray-800">
-        Building and financing tech products
-      </h2>
+      <h2 class="font-bold text-3xl text-gray-800">Some info about myself</h2>
       <p class="text-lg leading-relaxed text-slate-500">
-        All companies have unrealized ideas. I help turn unrealized ideas into
-        viable and sustainable businesses. I support business development
-        through acquisitions advisory, greenfield product launches, capital
-        raising.
-      </p>
-      <p class="text-lg leading-relaxed text-slate-500">
-        I look for industry specific trends, analyze competitors and customers,
-        I study investment opportunities, and create business plans. I also meet
-        with entrepreneurs and investors a lot.
+        Italy raised and US educated, I currently live in Milano. I am a product
+        consultant and I help shareholders of medium companies finance and
+        develop digital products and services. I also support them on
+        acquisitions of existing tech businesses.
       </p>
     </div>
-    <div class="grid md:grid-cols-[2fr,1fr] gap-10 mx-auto max-w-4xl mt-12">
+    <div
+      class="grid md:grid-cols-[2fr,1fr] gap-10 mx-auto max-w-4xl mt-12 mb-12">
       <div class="w-full aspect-square">
         <ul>
           {
@@ -87,37 +82,36 @@ const experiences = [
       </div>
     </div>
     <div class="grid md:grid-cols-1 gap-10 mx-auto max-w-4xl mt-1">
-      <div class="mt-4 text-center">
-        <h2 class="text-2xl text-gray-500 font-bold">Personal statement</h2>
-        <h3 class="text-sm text-slate-400 font-semibold">I have a mission</h3>
+      <div class="mt-4 mb-2">
+        <div class="text-center mb-10">
+          <h2 class="text-2xl text-gray-500 font-bold">Current engagement</h2>
+          <h3 class="text-sm text-slate-400 font-semibold">
+            Investment advisor
+          </h3>
+        </div>
+        <!-- <br class="w-full aspect-square" /> -->
+
+        <div class="text-lg leading-relaxed text-slate-500 mb-5">
+          <p class="text-lg leading-relaxed text-slate-500">
+            I am working with Smartbox 🏅 to find investment opportunities for a
+            corporate venture project. In 2022 I was advising a Suisse Family
+            office to dispose and refocus their Italian real estate portfolio.
+            Before that, I have advised Italian familiy office on thier
+            portfolio compamies.
+          </p>
+        </div>
+        <p class="text-lg leading-relaxed text-slate-500">
+          To deliver better results I have made a partnership 👬   with Claudio
+          Calvani and Matteo Bellina at
+          <a class="text-lime-700/75" href="https://vva.it"
+            >Valdani e Vicari Debt & Grants</a
+          >
+          to advise companies on debt raising. And an agreement with <a
+            class="text-purple-700/50"
+            href="https://neon2020.com">Neon</a
+          > communication agency specialized in building audience communication channels.
+        </p>
       </div>
-      <!-- <br class="w-full aspect-square" /> -->
-
-      <p class="text-lg leading-relaxed text-slate-500">
-        <span class="font-semibold">I believe in what I am doing:</span>
-        🧑‍💻  I support entrepreneurs to build media businesses within their companies
-        with the goal to improving their reputation and brand value.
-      </p>
-      <p class="text-lg leading-relaxed text-slate-500">
-        🔎  To do it, I research industries trying to understand understand
-        customers, niches, markets and competitors. I write documents, articles,
-        reports. 📝 I write Product Requirement Docs, capital raising
-        presentations, research documents. 📈 I also write and read business
-        plans, business models, financial projections. 🏦  Finally, I help
-        secure grants and fiscal incentives for R&D investments.
-      </p>
-
-      <p class="text-lg leading-relaxed text-slate-500">
-        To deliver better results I have made a partnership 👬   with Claudio
-        Calvani and Matteo Bellina at
-        <a class="text-lime-700/75" href="https://vva.it"
-          >Valdani e Vicari Debt & Grants</a
-        >
-        to advise companies on debt raising. And an agreement with <a
-          class="text-purple-700/50"
-          href="https://neon2020.com">Neon</a
-        > communication agency specialized in building audience communication channels.
-      </p>
     </div>
   </Container>
 </Layout>
