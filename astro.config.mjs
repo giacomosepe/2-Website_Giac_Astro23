@@ -5,7 +5,7 @@ import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
-  site: "https://2-website-giac-astro23.vercel.app/",
+  site: "https://giacomosepe.com/",
   base: "/",
   integrations: [
     tailwind(),
